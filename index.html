@@ -1,8 +1,17 @@
-<script>
-  var hash = window.location.hash;
-if (hash.replace("#","") == "" && hash.length > 7 && hash.length < 10 && !isNaN(hash)){
-  document.write("<h1>Redirecting...</h1><br>By JuegOStrower");
-  location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
-} else {
-  document.write("<h1>Please enter a valid ID project ID</h1><br>By @JuegOStrower");
+<html>
+  <head>
+    <script>
+      var hash = window.location.hash;
+      if (hash.replace("#","") == "" && hash.length > 7 && hash.length < 10 && !isNaN(hash)){
+        document.write("<h1>Redirecting...</h1><br>By JuegOStrower");
+        location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
+      } else {
+        document.write("<h1>Please enter a valid ID project ID</h1><br>By @JuegOStrower");
+      }
 </script>
+    </head>
+      <body>
+        <div id="text">
+        </div>
+  </body>
+</html>
