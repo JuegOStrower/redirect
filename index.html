@@ -1,17 +1,9 @@
-<html>
-  <head>
-    <script>
-      var hash = window.location.hash.replace("#","");
-      if (hash.length > 7 && hash.length < 11 && !isNaN(hash)){
-        document.write("<h1>Redirecting...</h1><h4>Entered ID " + hash + "<br>By JuegOStrower");
-        location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
-      } else {
-        document.write("<h1>Please enter a valid project ID</h1><h4>Entered ID " + hash + "<br>By @JuegOStrower");
-      }
+<script>
+var hash = window.location.hash.replace("#","");
+if (hash.length > 7 && hash.length < 11 && !isNaN(hash)){
+  document.write("<h1>Redirecting...</h1><h4>Entered ID: " + hash + "<br>By JuegOStrower");
+  location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
+} else {
+  document.write("<h1>Please enter a valid project ID</h1><h4>Entered ID: " + hash + "<br>By @JuegOStrower");
+}
 </script>
-    </head>
-      <body>
-        <div id="text">
-        </div>
-  </body>
-</html>
