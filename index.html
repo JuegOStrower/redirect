@@ -2,7 +2,7 @@
   <head>
     <script>
       var hash = window.location.hash;
-      if (hash.replace("#","") == "" && hash.length > 7 && hash.length < 10 && !isNaN(hash)){
+      if (hash.replace("#","") == "" && hash.length > 7 && hash.length < 11 && !isNaN(hash)){
         document.write("<h1>Redirecting...</h1><br>By JuegOStrower");
         location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
       } else {
