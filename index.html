@@ -5,9 +5,9 @@ var hash = window.location.hash.replace("#","");
 if (hash.length > 2 && hash.length < 12 && (!isNaN(hash) || (hash.charAt(0) == "s" && (!isNaN(hash.substring(1, hash.length)))))){
   document.write("<h1>Redirecting...</h1><h4>Entered ID: " + hash + "<br>By JuegOStrower");
   if (hash.charAt(0) == "s"){
-    location.href = "http://scratch.mit.edu/studios/" + hash.replace("#","");
+    location.href = "http://scratch.mit.edu/studios/" + hash.replace("#","").substring(1, hash.length);
   } else {
-    location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","").substring(1, hash.length);
+    location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
   }
 } else {
   document.write("<h1>Please enter a valid project ID</h1><h4>Entered ID: " + hash.substring(1, hash.length) + "<br>By @JuegOStrower");
