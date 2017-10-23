@@ -2,9 +2,13 @@
 <link rel="icon" href="favicon.ico">
 <script>
 var hash = window.location.hash.replace("#","");
-if (hash.length > 7 && hash.length < 11 && !isNaN(hash)){
+if (hash.length > 2 && hash.length < 12 && (!isNaN(hash) || (hash.charAt(0) == "s" && (!isNaN(hash.substring(1, hash.length)))))){
   document.write("<h1>Redirecting...</h1><h4>Entered ID: " + hash + "<br>By JuegOStrower");
-  location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
+  if (hash.charAt(0) == "s"){
+    location.href = "http://scratch.mit.edu/studios/" + hash.replace("#","");
+  } else {
+    location.href = "http://scratch.mit.edu/projects/" + hash.replace("#","");
+  }
 } else {
   document.write("<h1>Please enter a valid project ID</h1><h4>Entered ID: " + hash + "<br>By @JuegOStrower");
 }
