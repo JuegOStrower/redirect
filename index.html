@@ -1,5 +1,13 @@
 <title> Redirecting - By @JuegOStrower</title>
 <link rel="icon" href="favicon.ico">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82877528-18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82877528-18');
+</script>
 <script>
 var hash = window.location.hash.replace("#","");
 if (hash.length > 2 && hash.length < 12 && (!isNaN(hash) || (hash.charAt(0) == "s" && (!isNaN(hash.substring(1, hash.length)))))){
@@ -15,12 +23,4 @@ if (hash.length > 2 && hash.length < 12 && (!isNaN(hash) || (hash.charAt(0) == "
 } else {
   document.write("<h1>Please enter a valid project ID</h1><h4>Entered ID: " + hash.substring(1, hash.length) + "<br>By @JuegOStrower");
 }
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82877528-18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-82877528-18');
 </script>
